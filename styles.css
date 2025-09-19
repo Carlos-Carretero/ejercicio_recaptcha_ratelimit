@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+.contenedor {
+  display: flex;
+  width: 100%;
+}
+
+.col-izquierda {
+  flex: 1;
+  background: linear-gradient(rgba(106,47,182,.95), rgba(161,15,110,.95)),
+    url("https://agenciacristal.com/wp-content/uploads/2023/06/banner.jpg") center/cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.col-izquierda .contenido {
+  max-width: 400px;
+}
+
+.col-izquierda img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.col-izquierda h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.col-izquierda p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.col-izquierda small {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.col-derecha {
+  flex: 1;
+  background: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-derecha h3 {
+  color: #a10f6e;
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.input-grupo {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 8px 0;
+}
+
+.input-grupo i {
+  margin-right: 10px;
+  color: #a10f6e;
+  font-size: 16px;
+}
+
+.input-grupo input,
+.input-grupo textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.categorias label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.categorias input {
+  accent-color: #a10f6e;
+}
+
+.captcha-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.captcha-text {
+  background: #e9ecef;
+  padding: 8px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #495057;
+}
+
+.btn-enviar {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #a10f6e, #6a2fb6);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 47, 182, 0.3);
+}
+
+.g-recaptcha {
+  margin: 25px 0 20px;
+}
+
+@media(max-width: 900px) {
+  .contenedor {
+    flex-direction: column;
+  }
+  .col-izquierda, .col-derecha {
+    flex: none;
+    width: 100%;
+    min-height: auto;
+  }
+  .col-izquierda {
+    padding: 30px;
+  }
+  .col-derecha {
+    padding: 30px;
+  }
+}
